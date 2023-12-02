@@ -13,21 +13,28 @@ class FantasyPet {
         string getName();
         void setFantasyName(string name);
 
+        int getFriendshipLevel();
         int getHungry();
         int getSleepy();
-        int getHappy();
+        int getMood();
+        void setFriendshipLevel(int friends);
         void setHungry(int hunger);
         void setSleepy(int sleep);
-        void setHappy(int mood);
-        void print() const;
-        void printMenu() const;
+        void setMood(int mood);
+
+        //options that print that all derived files use
+        void printHealth() const;
+        void printMenu();
         void printMoreOptions() const;
+        void printQuit() const;
+        void printFriendship();
         
     private:
         string fantasyName; //also file name
         int hunger;
         int sleep;
         int mood;
+        int friendshipLevel;
 };
 
 #endif

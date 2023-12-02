@@ -1,19 +1,32 @@
 #include <iostream>
-#include "Dragon.h"
+#include "Sasquatch.h"
 
-Dragon::Dragon(){
+Sasquatch::Sasquatch(){
   setHungry(20);
   setSleepy(20);
   setMood(20);
+  setFriendshipLevel(0);
 }
 
-void Dragon::playFetch(){
-  cout << "You played fetch with " << getName() << "!" << endl;
+void Sasquatch::walkInForest(){ //playing
+  cout << endl;
+  cout << "You and " << getName() << " walked through the forest!" << endl;
+  cout << endl;
   //for hungry
   setHungry(getHungry() - 4);
-  
+
+  if(getHungry() <= 5){
+    cout << getName() << " is hungry!" << endl;
+    cout << endl;
+  }
+
   //for sleepy
   setSleepy(getSleepy() - 4);
+
+  if(getSleepy() <= 5){
+    cout << getName() << " is tired!" << endl;
+    cout << endl;
+  }
 
   //for mood
   if (getMood() == 20){
@@ -31,10 +44,15 @@ void Dragon::playFetch(){
   else{
     setMood(getMood() + 4);
   }
+
+  //for friendship
+  setFriendshipLevel(getFriendshipLevel() + 3);
 }
 
-void Dragon::feedMeat(){
-  cout << "You fed " << getName() << " some meat!" << endl;
+void Sasquatch::feedFood(){
+  cout << endl;
+  cout << "You fed " << getName() << " a cheeseburger!" << endl;
+  cout << endl;
   //for hungry
   if (getHungry() == 20){
     setHungry(getHungry());
@@ -55,6 +73,11 @@ void Dragon::feedMeat(){
   //for sleep
   setSleepy(getSleepy() - 3);
 
+  if(getSleepy() <= 5){
+    cout << getName() << " is tired!" << endl;
+    cout << endl;
+  }
+
   //for mood
   if (getMood() == 20){
     setMood(getMood());
@@ -71,12 +94,23 @@ void Dragon::feedMeat(){
   else{
     setMood(getMood() + 4);
   }
+
+  //for friendship
+  setFriendshipLevel(getFriendshipLevel() + 3);
 }
 
-void Dragon::haveRest(){
+void Sasquatch::haveRest(){
+  cout << endl;
   cout << getName() << " went to sleep!" << endl;
+  cout << endl;
+  
   //for hungry
   setHungry(getHungry() - 3);
+
+  if(getHungry() <= 5){
+    cout << getName() << " is hungry!" << endl;
+    cout << endl;
+  }
 
   //for sleep
   if (getSleepy() == 20){
@@ -97,4 +131,12 @@ void Dragon::haveRest(){
 
   //for mood
   setMood(getMood() - 3);
+
+  if(getMood() <= 5){
+    cout << getName() << " is mad!" << endl;
+    cout << endl;
+  }
+
+  //for friendship
+  setFriendshipLevel(getFriendshipLevel() + 3);
 }
