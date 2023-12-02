@@ -15,13 +15,14 @@ class FantasyPet {
 
         int getHungry();
         int getSleepy();
-        int getHappy();
+        int getMood();
         void setHungry(int hunger);
         void setSleepy(int sleep);
-        void setHappy(int mood);
-        void print() const;
+        void setMood(int mood);
+        void printHealth() const;
         void printMenu() const;
         void printMoreOptions() const;
+        void printQuit() const;
         
     private:
         string fantasyName; //also file name
