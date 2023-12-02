@@ -26,34 +26,57 @@ int main(){
       cout << "2: Sasquatch" << endl;
       cout << "3: Unicorn" << endl;
       cout << "4: Duck" << endl;
-      cout << "5 for Quit" << endl;
+      cout << "5: Quit" << endl;
   
       int petNum;
       cin >> petNum;
       if (petNum == 1 || petNum == 2 || petNum == 3 || petNum == 4){
         cout << "What would you like to name your pet?" << endl;
         string petName;
-        cin >> petName; // no spaces in name for right now
-        //cin.ignore();
+        cin >> petName;
         
         FantasyPet myPet;
         myPet.setFantasyName(petName);
 
         if (petNum == 1){
           cout << myPet.getName() << " the Dragon" << endl;
+          //add ascii dragon
+          myPet.printMenu();
+          
+          int dragonMenuSelection;
+          cin >> dragonMenuSelection;
+          
+            if(dragonMenuSelection == 4){
+              myPet.printMoreOptions();
+              
+              int moreOptions;
+              cin >> moreOptions;
+              
+              if (moreOptions == 1){
+                myPet.print();
+              }
+            }
           break;
         }
+          
         else if (petNum == 2){
           cout << myPet.getName() << " the Sasquatch" << endl;
+          //add ascii sasquatch
+          myPet.printMenu();
           break;
-          
         }
+          
         else if (petNum == 3){
           cout << myPet.getName() << " the Unicorn" << endl;
+          //add ascii unicorn
+          myPet.printMenu();
           break;
         }
+          
         else if (petNum == 4){
           cout << myPet.getName() << " the Duck" << endl;
+          //add ascii duck
+          myPet.printMenu();
           break;
         }
       }
@@ -66,11 +89,8 @@ int main(){
       // will cout load menu eventually idk
     }
   }
-
-  
 //FantasyPet myPet; // will be put in while loop once figured out in derived classes
-
-//myPet.print(); works fine
+  //myPet.print();
 
 return 0;
 }
