@@ -5,7 +5,7 @@ FantasyPet::FantasyPet(){
   sleep = 20;
   mood = 20;
   friendshipLevel = 0;
-}
+} //the standard mood level for hunger, sleep, and mood
 
 FantasyPet::FantasyPet(int hungry, int sleepy, int moody){
   hunger = hungry;
@@ -35,6 +35,44 @@ void FantasyPet::setFriendshipLevel(int friends) {
   friendshipLevel = friends;
 }
 
+//save and load game
+void FantasyPet::saveFile(string name){
+  fantasyName = name;
+
+  ofstream file(fantasyName);
+
+  if (file.is_open()) {
+      file << hunger << endl;
+      file << sleep << endl;
+      file << mood << endl;
+      file << friendshipLevel << endl;
+      file.close();
+      cout << endl;
+      cout << name << " successfully saved!";
+  }
+}
+
+void FantasyPet::loadFile(string name){
+  fantasyName = name;
+
+  ifstream file(fantasyName);
+
+  if(file.is_open()){
+    file >> hunger;
+    file >> sleep;
+    file >> mood;
+    file >> friendshipLevel;
+
+    file.close();
+    cout << endl;
+    cout << fantasyName << " loaded successfully!" << endl;
+  }
+  else{
+    cout << "Pet not found!" << endl;
+  }
+}
+
+//all things printed in game
 void FantasyPet::printHealth() const { 
   //for hunger
   if(hunger == 20 || hunger == 19){
@@ -167,18 +205,33 @@ void FantasyPet::printMenu(){
   if(friendshipLevel >= 20 && friendshipLevel <= 21){
     cout << endl;
     cout << FantasyPet::getName() << "'s friendship level increased to Level 2! There are new options for playing and feeding." << endl;
+    setHungry(20);
+    setMood(20);
+    setSleepy(20);
   }
+    
   else if(friendshipLevel >= 40 && friendshipLevel <= 42){
     cout << endl;
     cout << FantasyPet::getName() << "'s friendship level increased to Level 3! There are new options for playing and feeding." << endl;
+    setHungry(20);
+    setMood(20);
+    setSleepy(20);
   }
+    
   else if(friendshipLevel == 60){
     cout << endl;
     cout << FantasyPet::getName() << "'s friendship level increased to Level 4! There are new options for playing and feeding." << endl;
+    setHungry(20);
+    setMood(20);
+    setSleepy(20);
   }
+    
   else if(friendshipLevel >= 80 && friendshipLevel <= 82){
     cout << endl;
     cout << FantasyPet::getName() << "'s friendship level increased to the max level!" << endl;
+    setHungry(20);
+    setMood(20);
+    setSleepy(20);
   }
   
   cout << endl;
@@ -206,18 +259,28 @@ void FantasyPet::printQuit() const{
 
 void FantasyPet::printFriendship(){
   if (friendshipLevel >= 0 && friendshipLevel <= 19){
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
     cout << "Friendship Level: 1"  << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
   }
   else if (friendshipLevel >= 20 && friendshipLevel <= 39){
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
     cout << "Friendship Level: 2" << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
   }
   else if (friendshipLevel >= 40 && friendshipLevel <= 59){
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
     cout << "Friendship Level: 3" << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
   }
   else if (friendshipLevel >= 60 && friendshipLevel <= 79){
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
     cout << "Friendship Level: 4" << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
   }
   else if (friendshipLevel >= 80){
+    cout << "=-=-=-=-=-=-=-=-=-=-=-=-="<< endl;
     cout << "Friendship Level: 5 (MAX)" << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=-=-=-=" << endl;
   }
 }

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -21,6 +22,10 @@ class FantasyPet {
         void setHungry(int hunger);
         void setSleepy(int sleep);
         void setMood(int mood);
+
+        //for saving/loading game
+        void saveFile(string name);
+        void loadFile(string name);
 
         //options that print that all derived files use
         void printHealth() const;
