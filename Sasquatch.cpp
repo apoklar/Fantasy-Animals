@@ -140,3 +140,54 @@ void Sasquatch::haveRest(){
   //for friendship
   setFriendshipLevel(getFriendshipLevel() + 3);
 }
+
+void Sasquatch::sasquatchLoop(){
+  while(true){
+     cout << getName() << " the Sasquatch" << endl;
+     //add ascii sasquatch
+     printMenu();
+  
+     int sasquatchMenuSelection;
+     cin >> sasquatchMenuSelection;
+  
+      if(sasquatchMenuSelection == 1){
+        feedFood();
+      }
+      else if(sasquatchMenuSelection == 2){
+        walkInForest();
+      }
+      else if(sasquatchMenuSelection == 3){
+        haveRest();
+      }
+      else if(sasquatchMenuSelection == 4){
+        printMoreOptions();
+  
+        int moreOptions;
+        cin >> moreOptions;
+  
+        if (moreOptions == 1){
+          printHealth();
+        }
+        else if(moreOptions == 2){
+          printFriendship();
+        }
+        else if(moreOptions == 3){
+          int petNum = 2;
+          saveFile(getName(), petNum);
+          break;
+        }
+        else if(moreOptions == 4){
+          printQuit();
+  
+          int quitGame;
+          cin >> quitGame;
+          if(quitGame == 1){
+            break;
+          }
+          else if(quitGame == 2){
+            continue;
+          }
+        }
+      }
+  } 
+}

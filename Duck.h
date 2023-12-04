@@ -12,6 +12,7 @@ class Duck : public FantasyPet{
         void goSwimming();
         void feedBread();
         void haveRest();
+        void duckLoop();
 };
 
 #endif

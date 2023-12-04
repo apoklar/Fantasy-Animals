@@ -9,9 +9,32 @@ Duck::Duck(){
 }
 
 void Duck::goSwimming(){ //playing
-  cout << endl;
-  cout << getName() << " went swimming!" << endl;
-  cout << endl;
+  if(getFriendshipLevel() >= 0 && getFriendshipLevel() <= 19){
+    cout << endl;
+    cout << getName() << " went swimming!" << endl;
+    cout << endl;
+  }
+  else if(getFriendshipLevel() >= 20 && getFriendshipLevel() <= 39){
+    cout << endl;
+    cout << "You gave " << getName() << " a chew toy!" << endl;
+    cout << endl;
+  }
+  else if(getFriendshipLevel() >= 40 && getFriendshipLevel() <= 59){
+    cout << endl;
+    cout << getName() << " shot fireballs at targets!" << endl;
+    cout << endl;
+  }
+  else if(getFriendshipLevel() >= 60 && getFriendshipLevel() <= 79){
+    cout << endl;
+    cout << "You played tug-of-war with " << getName() << "! (You lost)" << endl;
+    cout << endl;
+  }
+  else if(getFriendshipLevel() >= 80){
+    cout << endl;
+    cout << "You and " << getName() << " went flying through the sky!" << endl;
+    cout << endl;
+  }
+  
   //for hungry
   setHungry(getHungry() - 3);
 
@@ -46,13 +69,37 @@ void Duck::goSwimming(){ //playing
   setFriendshipLevel(getFriendshipLevel() + 3);
   if(getFriendshipLevel() >= 40 && getFriendshipLevel() <= 42){
     cout << getName() << " evolved into a Phoenix!" << endl;
+    cout << endl;
   }
 }
 
 void Duck::feedBread(){
-  cout << endl;
-  cout << "You fed " << getName() << " bread!" << endl;
-  cout << endl;
+  if(getFriendshipLevel() >= 0 && getFriendshipLevel() <= 19){
+    cout << endl;
+    cout << "You fed " << getName() << " bread!" << endl;
+    cout << endl;
+  }
+  else if(getFriendshipLevel() >= 20 && getFriendshipLevel() <= 39){
+    cout << endl;
+    cout << "You fed " << getName() << " some watermelon!" << endl;
+    cout << endl;
+  }
+  else if(getFriendshipLevel() >= 40 && getFriendshipLevel() <= 59){
+    cout << endl;
+    cout << "You fed " << getName() << " rare spices!" << endl;
+    cout << endl;
+  }
+  else if(getFriendshipLevel() >= 60 && getFriendshipLevel() <= 79){
+    cout << endl;
+    cout << "You fed " << getName() << " fruit extracts!" << endl;
+    cout << endl;
+  }
+  else if(getFriendshipLevel() >= 80){
+    cout << endl;
+    cout << "You fed " << getName() << " rare spices!" << endl;
+    cout << endl;
+  }
+
   //for hungry
   if (getHungry() == 20){
     setHungry(getHungry());
@@ -93,6 +140,7 @@ void Duck::feedBread(){
   setFriendshipLevel(getFriendshipLevel() + 3);
   if(getFriendshipLevel() >= 40 && getFriendshipLevel() <= 42){
     cout << getName() << " evolved into a Phoenix!" << endl;
+    cout << endl;
   }
 }
 
@@ -135,5 +183,77 @@ void Duck::haveRest(){
   setFriendshipLevel(getFriendshipLevel() + 3);
   if(getFriendshipLevel() >= 40 && getFriendshipLevel() <= 42){
     cout << getName() << " evolved into a Phoenix!" << endl;
+    cout << endl;
+  }
+}
+
+void Duck::duckLoop(){
+  while(true){
+    if(getFriendshipLevel() >= 0 && getFriendshipLevel() <= 39){
+      cout << getName() << " the Duck" << endl;
+      cout << "  __" << endl;
+      cout << "<(o )___" << endl;
+      cout << " ( ._> /" << endl;
+      cout << "  `---' " << endl;
+    }
+    else if(getFriendshipLevel() >= 40){
+      cout << getName() << " the Phoenix" << endl;
+      cout << "      __             __" << endl;
+      cout << "   .-'.'     .-.     '.'-." << endl;
+      cout << " .'.((      ( ^ `>     )).'." << endl;
+      cout << "/`'- \\'._____\\ (_____.'/ -'`\\" << endl;
+      cout << "|-''`.'------' '------'.`''-|" << endl;
+      cout << "|.-'`.'.'.`/ | | \\`.'.'.`'-.|" << endl;
+      cout << " \\ .' . /  | | | |  \\ . '. /" << endl;
+      cout << "  '._. :  _|_| |_|_  : ._.'" << endl;
+      cout << "     ````` /T\"Y\"T\\ `````" << endl;
+      cout << "          / | | | \\" << endl;
+      cout << "         `'`'`'`'`'`" << endl; 
+    }
+
+    printMenu();
+
+    int duckMenuSelection;
+    cin >> duckMenuSelection;
+
+      if(duckMenuSelection == 1){
+        feedBread();
+      }
+      else if(duckMenuSelection == 2){
+        goSwimming();
+      }
+      else if(duckMenuSelection == 3){
+        haveRest();
+      }
+      else if(duckMenuSelection == 4){
+        printMoreOptions();
+
+        int moreOptions;
+        cin >> moreOptions;
+
+        if (moreOptions == 1){
+          printHealth();
+        }
+        else if(moreOptions == 2){
+          printFriendship();
+        }
+        else if(moreOptions == 3){
+          int petNum = 4;
+          saveFile(getName(), petNum);
+          break;
+        }
+        else if(moreOptions == 4){
+          printQuit();
+
+          int quitGame;
+          cin >> quitGame;
+          if(quitGame == 1){
+            break;
+          }
+          else if(quitGame == 2){
+            continue;
+          }
+        }
+      }
   }
 }

@@ -36,17 +36,19 @@ void FantasyPet::setFriendshipLevel(int friends) {
 }
 
 //save and load game
-void FantasyPet::saveFile(string name){
+void FantasyPet::saveFile(string name, int petNum){
   fantasyName = name;
 
   ofstream file(fantasyName);
 
   if (file.is_open()) {
+      file << petNum << endl;
       file << hunger << endl;
       file << sleep << endl;
       file << mood << endl;
       file << friendshipLevel << endl;
       file.close();
+    
       cout << endl;
       cout << name << " successfully saved!";
   }
@@ -58,14 +60,18 @@ void FantasyPet::loadFile(string name){
   ifstream file(fantasyName);
 
   if(file.is_open()){
+    int petNum;
+    file >> petNum;
     file >> hunger;
     file >> sleep;
     file >> mood;
     file >> friendshipLevel;
-
     file.close();
-    cout << endl;
-    cout << fantasyName << " loaded successfully!" << endl;
+
+    setHungry(hunger);
+    setSleepy(sleep);
+    setMood(mood);
+    setFriendshipLevel(friendshipLevel);
   }
   else{
     cout << "Pet not found!" << endl;

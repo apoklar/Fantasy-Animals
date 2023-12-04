@@ -53,249 +53,26 @@ int main(){
 
         //Dragon pet
         while (petNum == 1){
-
-          cout << endl;
-          cout << dragon.getName() << " the Dragon" << endl; 
-          cout << " <>=======() " << endl;
-          cout << "(/\\___   /|\\\\          ()==========<>_" << endl;
-          cout << "      \\_/ | \\\\        //|\\   ______/ \\)" << endl;
-          cout << "        \\_|  \\\\      // | \\_/" << endl;
-          cout << "          \\|\\/|\\_   //  /\\/" << endl;
-          cout << "           (oo)\\ \\_//  /" << endl;
-          cout << "          //_/\\_\\/ /  |" << endl;
-          cout << "         @@/  |=\\  \\  |" << endl;
-          cout << "              \\_=\\_ \\ |" << endl;
-          cout << "                \\==\\ \\|\\_" << endl;
-          cout << "             __(\\===\\(  )\\" << endl;
-          cout << "            (((~) __(_/   |" << endl;
-          cout << "                 (((~) \\  /" << endl;
-          cout << "                 ______/ /" << endl;
-          cout << "                 '------'" << endl;
-          dragon.printMenu();
-
-          int dragonMenuSelection;
-          cin >> dragonMenuSelection;
-
-            if(dragonMenuSelection == 1){
-              dragon.feedMeat();
-            }
-            else if(dragonMenuSelection == 2){
-              dragon.playFetch();
-            }
-            else if(dragonMenuSelection == 3){
-              dragon.haveRest();
-            }
-            else if(dragonMenuSelection == 4){
-              dragon.printMoreOptions();
-
-              int moreOptions;
-              cin >> moreOptions;
-
-              if (moreOptions == 1){
-                dragon.printHealth();
-              }
-              else if(moreOptions == 2){
-                dragon.printFriendship();
-              }
-              else if(moreOptions == 3){
-                dragon.saveFile(dragon.getName());
-                break;
-              }
-              else if(moreOptions == 4){
-                dragon.printQuit();
-
-                int quitGame;
-                cin >> quitGame;
-                if(quitGame == 1){
-                  break;
-                }
-                else if(quitGame == 2){
-                  continue;
-                }
-              }
-            }
+          dragon.dragonLoop();
+          break;
         }
 
         //Sasquatch Pet
         while (petNum == 2){
-          cout << bigfoot.getName() << " the Sasquatch" << endl;
-          //add ascii sasquatch
-          bigfoot.printMenu();
-
-          int sasquatchMenuSelection;
-          cin >> sasquatchMenuSelection;
-
-            if(sasquatchMenuSelection == 1){
-              bigfoot.feedFood();
-            }
-            else if(sasquatchMenuSelection == 2){
-              bigfoot.walkInForest();
-            }
-            else if(sasquatchMenuSelection == 3){
-              bigfoot.haveRest();
-            }
-            else if(sasquatchMenuSelection == 4){
-              bigfoot.printMoreOptions();
-
-              int moreOptions;
-              cin >> moreOptions;
-
-              if (moreOptions == 1){
-                bigfoot.printHealth();
-              }
-              else if(moreOptions == 2){
-                bigfoot.printFriendship();
-              }
-              else if(moreOptions == 3){
-                bigfoot.saveFile(bigfoot.getName());
-                break;
-              }
-              else if(moreOptions == 4){
-                bigfoot.printQuit();
-
-                int quitGame;
-                cin >> quitGame;
-                if(quitGame == 1){
-                  break;
-                }
-                else if(quitGame == 2){
-                  continue;
-                }
-              }
-            }
+          bigfoot.sasquatchLoop();
+          break;
         }
 
         //Unicorn Pet
         while (petNum == 3){
-          cout << unicorn.getName() << " the Unicorn" << endl;
-          cout << "               |))    |))" << endl;
-          cout << " .             |  )) /   ))" << endl;
-          cout << " \\\\   ^ ^      |    /      ))" << endl;
-          cout << "  \\\\(((  )))   |   /        ))" << endl;
-          cout << "   / G    )))  |  /        ))" << endl;
-          cout << "  |o  _)   ))) | /       )))" << endl;
-          cout << "   --' |     ))`/      )))" << endl;
-          cout << "    ___|              )))" << endl;
-          cout << "   / __\\             ))))`()))" << endl;
-          cout << "  /\\@   /             `(())))" << endl;
-          cout << "  \\/   /  /`_______/\\   \\  ))))" << endl;
-          cout << "       | |          \\ \\  |  )))" << endl;
-          cout << "       | |           | | |   )))" << endl;
-          cout << "       |_@           |_|_@    ))" << endl;
-          cout << "      /_/           /_/_/" << endl;
-
-          unicorn.printMenu();
-
-          int unicornMenuSelection;
-          cin >> unicornMenuSelection;
-
-            if(unicornMenuSelection == 1){
-              unicorn.feedCupcakes();
-            }
-            else if(unicornMenuSelection == 2){
-              unicorn.flyRainbow();
-            }
-            else if(unicornMenuSelection == 3){
-              unicorn.haveRest();
-            }
-            else if(unicornMenuSelection == 4){
-              unicorn.printMoreOptions();
-
-              int moreOptions;
-              cin >> moreOptions;
-
-              if (moreOptions == 1){
-                unicorn.printHealth();
-              }
-              else if(moreOptions == 2){
-                unicorn.printFriendship();
-              }
-              else if(moreOptions == 3){
-                unicorn.saveFile(unicorn.getName());
-                break;
-              }
-              else if(moreOptions == 4){
-                unicorn.printQuit();
-
-                int quitGame;
-                cin >> quitGame;
-                if(quitGame == 1){
-                  break;
-                }
-                else if(quitGame == 2){
-                  continue;
-                }
-              }
-            }
+          unicorn.unicornLoop();
+          break;
         }
 
         //Duck pet
         while (petNum == 4){
-          if(duck.getFriendshipLevel() >= 0 && duck.getFriendshipLevel() <= 39){
-            cout << duck.getName() << " the Duck" << endl;
-            cout << "  __" << endl;
-            cout << "<(o )___" << endl;
-            cout << " ( ._> /" << endl;
-            cout << "  `---' " << endl;
-          }
-          else if(duck.getFriendshipLevel() >= 40){
-            cout << duck.getName() << " the Phoenix" << endl;
-            cout << "      __             __" << endl;
-            cout << "   .-'.'     .-.     '.'-." << endl;
-            cout << " .'.((      ( ^ `>     )).'." << endl;
-            cout << "/`'- \\'._____\\ (_____.'/ -'`\\" << endl;
-            cout << "|-''`.'------' '------'.`''-|" << endl;
-            cout << "|.-'`.'.'.`/ | | \\`.'.'.`'-.|" << endl;
-            cout << " \\ .' . /  | | | |  \\ . '. /" << endl;
-            cout << "  '._. :  _|_| |_|_  : ._.'" << endl;
-            cout << "     ````` /T\"Y\"T\\ `````" << endl;
-            cout << "          / | | | \\" << endl;
-            cout << "         `'`'`'`'`'`" << endl; 
-          }
-
-          duck.printMenu();
-
-          int duckMenuSelection;
-          cin >> duckMenuSelection;
-
-            if(duckMenuSelection == 1){
-              duck.feedBread();
-            }
-            else if(duckMenuSelection == 2){
-              duck.goSwimming();
-            }
-            else if(duckMenuSelection == 3){
-              duck.haveRest();
-            }
-            else if(duckMenuSelection == 4){
-              duck.printMoreOptions();
-
-              int moreOptions;
-              cin >> moreOptions;
-
-              if (moreOptions == 1){
-                duck.printHealth();
-              }
-              else if(moreOptions == 2){
-                duck.printFriendship();
-              }
-              else if(moreOptions == 3){
-                duck.saveFile(duck.getName());
-                break;
-              }
-              else if(moreOptions == 4){
-                duck.printQuit();
-
-                int quitGame;
-                cin >> quitGame;
-                if(quitGame == 1){
-                  break;
-                }
-                else if(quitGame == 2){
-                  continue;
-                }
-              }
-            }
+          duck.duckLoop();
+          break;
         }
       }
       else if (petNum == 5){
@@ -303,12 +80,60 @@ int main(){
       }
     }
     else if (menuSelection == 2){
+      cout << endl;
       cout << "What is the name of your pet?" << endl;
       string nameOfPet;
       cin >> nameOfPet;
       
-      Dragon dragon;
-      dragon.loadFile(nameOfPet);
+      int petNum;
+      ifstream loadFile(nameOfPet);
+
+      if(loadFile.is_open()){
+        loadFile >> petNum; // read the saved petNum
+        loadFile.close();
+        cout << nameOfPet << " loaded successfully!" << endl;
+        cout << endl;
+      }
+      else {
+        cout << "Pet not found!" << endl;
+        break;
+      }
+
+      //dragon saved game
+      while (petNum == 1){
+        Dragon dragon;
+        dragon.loadFile(nameOfPet);
+
+        dragon.dragonLoop();
+        break;
+      }
+      
+      //sasquatch saved game
+      while (petNum == 2){
+        Sasquatch bigfoot;
+        bigfoot.loadFile(nameOfPet);
+
+        bigfoot.sasquatchLoop();
+        break;
+      }
+      
+      //unicorn saved game
+      while (petNum == 3){
+        Unicorn unicorn;
+        unicorn.loadFile(nameOfPet);
+
+        unicorn.unicornLoop();
+        break;
+      }
+      
+      //duck saved game
+      while (petNum == 4){
+        Duck duck;
+        duck.loadFile(nameOfPet);
+
+        duck.duckLoop();
+        break;
+      }
     }
     break;
   }

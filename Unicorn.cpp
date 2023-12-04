@@ -128,3 +128,69 @@ void Unicorn::haveRest(){
   //for friendship
   setFriendshipLevel(getFriendshipLevel() + 3);
 }
+
+void Unicorn::unicornLoop(){
+  while(true){
+    cout << getName() << " the Unicorn" << endl;
+    cout << "               |))    |))" << endl;
+    cout << " .             |  )) /   ))" << endl;
+    cout << " \\\\   ^ ^      |    /      ))" << endl;
+    cout << "  \\\\(((  )))   |   /        ))" << endl;
+    cout << "   / G    )))  |  /        ))" << endl;
+    cout << "  |o  _)   ))) | /       )))" << endl;
+    cout << "   --' |     ))`/      )))" << endl;
+    cout << "    ___|              )))" << endl;
+    cout << "   / __\\             ))))`()))" << endl;
+    cout << "  /\\@   /             `(())))" << endl;
+    cout << "  \\/   /  /`_______/\\   \\  ))))" << endl;
+    cout << "       | |          \\ \\  |  )))" << endl;
+    cout << "       | |           | | |   )))" << endl;
+    cout << "       |_@           |_|_@    ))" << endl;
+    cout << "      /_/           /_/_/" << endl;
+  
+    printMenu();
+  
+    int unicornMenuSelection;
+    cin >> unicornMenuSelection;
+  
+      if(unicornMenuSelection == 1){
+        feedCupcakes();
+      }
+      else if(unicornMenuSelection == 2){
+        flyRainbow();
+      }
+      else if(unicornMenuSelection == 3){
+        haveRest();
+      }
+      else if(unicornMenuSelection == 4){
+        printMoreOptions();
+  
+        int moreOptions;
+        cin >> moreOptions;
+  
+        if (moreOptions == 1){
+          printHealth();
+        }
+        else if(moreOptions == 2){
+          printFriendship();
+        }
+        else if(moreOptions == 3){
+          int petNum = 3;
+          saveFile(getName(), petNum);
+          break;
+        }
+        else if(moreOptions == 4){
+          printQuit();
+  
+          int quitGame;
+          cin >> quitGame;
+          if(quitGame == 1){
+            break;
+          }
+          else if(quitGame == 2){
+            continue;
+          }
+        }
+      }
+  }
+}

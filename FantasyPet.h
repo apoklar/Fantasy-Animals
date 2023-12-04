@@ -24,7 +24,7 @@ class FantasyPet {
         void setMood(int mood);
 
         //for saving/loading game
-        void saveFile(string name);
+        void saveFile(string name, int petNum);
         void loadFile(string name);
 
         //options that print that all derived files use

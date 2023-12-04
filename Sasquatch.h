@@ -12,6 +12,7 @@ class Sasquatch : public FantasyPet{
         void walkInForest();
         void feedFood();
         void haveRest();
+        void sasquatchLoop();
 };
 
 #endif
