@@ -36,7 +36,18 @@ void Duck::goSwimming(){ //playing
   }
   
   //for hungry
-  setHungry(getHungry() - 3);
+  if(getHungry() == 2){
+    setHungry(getHungry() - 2);
+  }
+  else if(getHungry() == 1){
+    setHungry(getHungry() - 1);
+  }
+  else if(getHungry() == 0){
+    setHungry(getHungry() == 0);
+  }
+  else{
+    setHungry(getHungry() - 3);
+  }
 
   if(getHungry() <= 5){
     cout << getName() << " is hungry!" << endl;
@@ -44,7 +55,18 @@ void Duck::goSwimming(){ //playing
   }
 
   //for sleepy
-  setSleepy(getSleepy() - 3);
+  if(getSleepy() == 2){
+    setSleepy(getSleepy() - 2);
+  }
+  else if(getSleepy() == 1){
+    setSleepy(getSleepy() - 1);
+  }
+  else if(getSleepy() == 0){
+    setSleepy(getSleepy() == 0);
+  }
+  else{
+    setSleepy(getSleepy() - 3);
+  }
 
   if(getSleepy() <= 5){
     cout << getName() << " is tired!" << endl;
@@ -115,7 +137,18 @@ void Duck::feedBread(){
   }
 
   //for sleep
-  setSleepy(getSleepy() - 3);
+  if(getSleepy() == 2){
+    setSleepy(getSleepy() - 2);
+  }
+  else if(getSleepy() == 1){
+    setSleepy(getSleepy() - 1);
+  }
+  else if(getSleepy() == 0){
+    setSleepy(getSleepy() == 0);
+  }
+  else{
+    setSleepy(getSleepy() - 3);
+  }
 
   if(getSleepy() <= 5){
     cout << getName() << " is tired!" << endl;
@@ -150,7 +183,18 @@ void Duck::haveRest(){
   cout << endl;
 
   //for hungry
-  setHungry(getHungry() - 3);
+  if(getHungry() == 2){
+    setHungry(getHungry() - 2);
+  }
+  else if(getHungry() == 1){
+    setHungry(getHungry() - 1);
+  }
+  else if(getHungry() == 0){
+    setHungry(getHungry() == 0);
+  }
+  else{
+    setHungry(getHungry() - 3);
+  }
 
   if(getHungry() <= 5){
     cout << getName() << " is hungry!" << endl;
@@ -172,7 +216,18 @@ void Duck::haveRest(){
   }
 
   //for mood
-  setMood(getMood() - 3);
+  if(getMood() == 2){
+    setMood(getMood() - 2);
+  }
+  else if(getMood() == 1){
+    setMood(getMood() - 1);
+  }
+  else if(getMood() == 0){
+    setMood(getMood() == 0);
+  }
+  else{
+    setMood(getMood() - 3);
+  }
 
   if(getMood() <= 5){
     cout << getName() << " is mad!" << endl;
@@ -185,6 +240,90 @@ void Duck::haveRest(){
     cout << getName() << " evolved into a Phoenix!" << endl;
     cout << endl;
   }
+}
+
+void Duck::giveTreat(){
+  cout << endl;
+  cout << "You gave " << getName() << " a treat!" << endl;
+  cout << endl;
+
+  //for sleep
+  if (getSleepy() == 20){
+    setSleepy(getSleepy());
+  }
+  else if (getSleepy() == 19){
+    setSleepy(getSleepy() + 1);
+  }
+  else {
+    setSleepy(getSleepy() + 2);
+  }
+
+  //for mood
+  if (getMood() == 20){
+    setMood(getMood());
+  }
+  else if (getMood() == 19){
+    setMood(getMood() + 1);
+  }
+  else {
+    setMood(getMood() + 2);
+  }
+
+  //for hungry
+  if (getHungry() == 20){
+    setHungry(getHungry());
+  }
+  else if (getHungry() == 19){
+    setHungry(getHungry() + 1);
+  }
+  else {
+    setHungry(getHungry() + 2);
+  }
+
+  //for friendship
+  setFriendshipLevel(getFriendshipLevel() + 2);
+}
+
+void Duck::giveBath(){
+  cout << endl;
+  cout << "You gave " << getName() << " a bath!" << endl;
+  cout << endl;
+
+  //for sleep
+  if(getSleepy() == 1){
+    setSleepy(getSleepy() - 1);
+  }
+  else if(getSleepy() == 0){
+    setSleepy(getSleepy() == 0);
+  }
+  else{
+    setSleepy(getSleepy() - 2);
+  }
+
+  //for mood
+  if (getMood() == 20){
+    setMood(getMood());
+  }
+  else if (getMood() == 19){
+    setMood(getMood() + 1);
+  }
+  else {
+    setMood(getMood() + 2);
+  }
+
+  //for hungry
+  if(getHungry() == 1){
+    setHungry(getHungry() - 1);
+  }
+  else if(getHungry() == 0){
+    setHungry(getHungry() == 0);
+  }
+  else{
+    setHungry(getHungry() - 2);
+  }
+
+  //for friendship
+  setFriendshipLevel(getFriendshipLevel() + 1);
 }
 
 void Duck::duckLoop(){
@@ -226,6 +365,12 @@ void Duck::duckLoop(){
         haveRest();
       }
       else if(duckMenuSelection == 4){
+        giveBath();
+      }
+      else if(duckMenuSelection == 5){
+        giveTreat();
+      }
+      else if(duckMenuSelection == 6){
         printMoreOptions();
 
         int moreOptions;

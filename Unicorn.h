@@ -12,6 +12,8 @@ class Unicorn : public FantasyPet{
         void flyRainbow();
         void feedCupcakes();
         void haveRest();
+        void giveTreat();
+        void giveBath();
         void unicornLoop();
 };
 

@@ -12,39 +12,64 @@ void Dragon::playFetch(){
   if(getFriendshipLevel() >= 0 && getFriendshipLevel() <= 19){
     cout << endl;
     cout << "You played fetch with " << getName() << "!" << endl;
-    cout << endl;
   }
   else if(getFriendshipLevel() >= 20 && getFriendshipLevel() <= 39){
     cout << endl;
     cout << "You and " << getName() << " protected a castle!" << endl;
-    cout << endl;
   }
   else if(getFriendshipLevel() >= 40 && getFriendshipLevel() <= 59){
     cout << endl;
     cout << "You and " << getName() << " played Dungeons and Dragons!" << endl;
-    cout << endl;
   }
   else if(getFriendshipLevel() >= 60 && getFriendshipLevel() <= 79){
     cout << endl;
     cout << "You played tug-of-war with " << getName() << "! (You lost)" << endl;
-    cout << endl;
   }
   else if(getFriendshipLevel() >= 80){
     cout << endl;
     cout << "You and " << getName() << " went flying through the mountains!" << endl;
-    cout << endl;
   }
   //for hungry
-  setHungry(getHungry() - 4);
-
+  if(getHungry() == 3){
+    setHungry(getHungry() - 3);
+  }
+  else if(getHungry() == 2){
+    setHungry(getHungry() - 2);
+  }
+  else if(getHungry() == 1){
+    setHungry(getHungry() - 1);
+  }
+  else if(getHungry() == 0){
+    setHungry(getHungry() == 0);
+  }
+  else{
+    setHungry(getHungry() - 4);
+  }
+  
   if (getHungry() <= 5){
+    cout << endl;
     cout << getName() << " is hungry!" << endl;
   }
   
   //for sleepy
-  setSleepy(getSleepy() - 4);
+  if(getSleepy() == 3){
+    setSleepy(getHungry() - 3);
+  }
+  else if(getSleepy() == 2){
+    setSleepy(getSleepy() - 2);
+  }
+  else if(getSleepy() == 1){
+    setSleepy(getSleepy() - 1);
+  }
+  else if(getSleepy() == 0){
+    setSleepy(getSleepy() == 0);
+  }
+  else{
+    setSleepy(getSleepy() - 4);
+  }
 
   if (getSleepy() <= 5){
+    cout << endl;
     cout << getName() << " is tired!" << endl;
   }
 
@@ -73,27 +98,22 @@ void Dragon::feedMeat(){
   if(getFriendshipLevel() >= 0 && getFriendshipLevel() <= 19){
     cout << endl;
     cout << "You fed " << getName() << " some meat!" << endl;
-    cout << endl;
   }
   else if(getFriendshipLevel() >= 20 && getFriendshipLevel() <= 39){
     cout << endl;
     cout << "You fed " << getName() << " some vegetables!" << endl;
-    cout << endl;
   }
   else if(getFriendshipLevel() >= 40 && getFriendshipLevel() <= 59){
     cout << endl;
     cout << "You fed " << getName() << " salmon!" << endl;
-    cout << endl;
   }
   else if(getFriendshipLevel() >= 60 && getFriendshipLevel() <= 79){
     cout << endl;
     cout << "You fed " << getName() << " a goblin!" << endl;
-    cout << endl;
   }
   else if(getFriendshipLevel() >= 80){
     cout << endl;
     cout << "You fed " << getName() << " chicken nuggets!" << endl;
-    cout << endl;
   }
   //for hungry
   if (getHungry() == 20){
@@ -113,9 +133,21 @@ void Dragon::feedMeat(){
   }
 
   //for sleep
-  setSleepy(getSleepy() - 3);
+  if(getSleepy() == 2){
+    setSleepy(getSleepy() - 2);
+  }
+  else if(getSleepy() == 1){
+    setSleepy(getSleepy() - 1);
+  }
+  else if(getSleepy() == 0){
+    setSleepy(getSleepy() == 0);
+  }
+  else{
+    setSleepy(getSleepy() - 3);
+  }
 
   if (getSleepy() <= 5){
+    cout << endl;
     cout << getName() << " is tired!" << endl;
   }
 
@@ -141,11 +173,13 @@ void Dragon::feedMeat(){
 }
 
 void Dragon::haveRest(){
+  cout << endl;
   cout << getName() << " went to sleep!" << endl;
   //for hungry
   setHungry(getHungry() - 3);
   
   if (getHungry() <= 5){
+    cout << endl;
     cout << getName() << " is hungry!" << endl;
   }
 
@@ -167,14 +201,108 @@ void Dragon::haveRest(){
   }
 
   //for mood
-  setMood(getMood() - 3);
+  if(getMood() == 2){
+    setMood(getMood() - 2);
+  }
+  else if(getMood() == 1){
+    setMood(getMood() - 1);
+  }
+  else if(getMood() == 0){
+    setMood(getMood() == 0);
+  }
+  else{
+    setMood(getMood() - 3);
+  }
 
   if (getMood() <= 5){
+    cout << endl;
     cout << getName() << " is mad!" << endl;
   }
 
   //for friendship
   setFriendshipLevel(getFriendshipLevel() + 3);
+}
+
+void Dragon::giveTreat(){
+  cout << endl;
+  cout << "You gave " << getName() << " a treat!" << endl;
+
+  //for sleep
+  if (getSleepy() == 20){
+    setSleepy(getSleepy());
+  }
+  else if (getSleepy() == 19){
+    setSleepy(getSleepy() + 1);
+  }
+  else {
+    setSleepy(getSleepy() + 2);
+  }
+
+  //for mood
+  if (getMood() == 20){
+    setMood(getMood());
+  }
+  else if (getMood() == 19){
+    setMood(getMood() + 1);
+  }
+  else {
+    setMood(getMood() + 2);
+  }
+
+  //for hungry
+  if (getHungry() == 20){
+    setHungry(getHungry());
+  }
+  else if (getHungry() == 19){
+    setHungry(getHungry() + 1);
+  }
+  else {
+    setHungry(getHungry() + 2);
+  }
+
+  //for friendship
+  setFriendshipLevel(getFriendshipLevel() + 2);
+}
+
+void Dragon::giveBath(){
+  cout << endl;
+  cout << "You gave " << getName() << " a bath!" << endl;
+
+  //for sleep
+  if(getSleepy() == 1){
+    setSleepy(getSleepy() - 1);
+  }
+  else if(getSleepy() == 0){
+    setSleepy(getSleepy() == 0);
+  }
+  else{
+    setSleepy(getSleepy() - 2);
+  }
+
+  //for mood
+  if (getMood() == 20){
+    setMood(getMood());
+  }
+  else if (getMood() == 19){
+    setMood(getMood() + 1);
+  }
+  else {
+    setMood(getMood() + 2);
+  }
+
+  //for hungry
+  if(getHungry() == 1){
+    setHungry(getHungry() - 1);
+  }
+  else if(getHungry() == 0){
+    setHungry(getHungry() == 0);
+  }
+  else{
+    setHungry(getHungry() - 2);
+  }
+
+  //for friendship
+  setFriendshipLevel(getFriendshipLevel() + 1);
 }
 
 void Dragon::dragonLoop(){
@@ -211,6 +339,12 @@ void Dragon::dragonLoop(){
         haveRest();
       }
       else if(dragonMenuSelection == 4){
+        giveBath();
+      }
+      else if(dragonMenuSelection == 5){
+        giveTreat();
+      }
+      else if(dragonMenuSelection == 6){
         printMoreOptions();
   
         int moreOptions;

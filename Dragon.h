@@ -12,6 +12,8 @@ class Dragon : public FantasyPet{
         void playFetch();
         void feedMeat();
         void haveRest();
+        void giveTreat();
+        void giveBath();
         void dragonLoop();
 };
 

@@ -74,6 +74,7 @@ void FantasyPet::loadFile(string name){
     setFriendshipLevel(friendshipLevel);
   }
   else{
+    cout << endl;
     cout << "Pet not found!" << endl;
   }
 }
@@ -82,30 +83,37 @@ void FantasyPet::loadFile(string name){
 void FantasyPet::printHealth() const { 
   //for hunger
   if(hunger == 20 || hunger == 19){
+    cout << endl;
     cout << "Hunger: ██████████" << endl;
     cout << endl;
   }
   else if(hunger == 18 || hunger == 17){
+    cout << endl;
     cout << "Hunger: █████████░" << endl;
     cout << endl;
   }
   else if(hunger == 16 || hunger == 15){
+    cout << endl;
     cout << "Hunger: ████████░░" << endl;
     cout << endl;
   }
   else if(hunger == 14 || hunger == 13){
+    cout << endl;
     cout << "Hunger: ███████░░░" << endl;
     cout << endl;
   }
   else if(hunger == 12 || hunger == 11){
+    cout << endl;
     cout << "Hunger: ██████░░░░" << endl;
     cout << endl;
   }
   else if(hunger == 10 || hunger == 9){
+    cout << endl;
     cout << "Hunger: █████░░░░░" << endl;
     cout << endl;
   }
   else if(hunger == 8 || hunger == 7){
+    cout << endl;
     cout << "Hunger: ████░░░░░░" << endl;
     cout << endl;
   }
@@ -114,11 +122,17 @@ void FantasyPet::printHealth() const {
     cout << endl;
   }
   else if(hunger == 4 || hunger == 3){
+    cout << endl;
     cout << "Hunger: ██░░░░░░░░" << endl;
     cout << endl;
   }
   else if(hunger ==  2 || hunger == 1){
+    cout << endl;
     cout << "Hunger: █░░░░░░░░░" << endl;
+    cout << endl;
+  }
+  else if(hunger == 0){
+    cout << "Hunger: ░░░░░░░░░░" << endl;
     cout << endl;
   }
   
@@ -163,6 +177,10 @@ void FantasyPet::printHealth() const {
     cout << "Sleep:  █░░░░░░░░░" << endl;
     cout << endl;
   }
+  else if(sleep == 0){
+    cout << "Sleep:  ░░░░░░░░░░" << endl;
+    cout << endl;
+  }
   
   //for mood
   if(mood == 20 || mood == 19){
@@ -205,6 +223,10 @@ void FantasyPet::printHealth() const {
     cout << "Mood:   █░░░░░░░░░" << endl;
     cout << endl;
   }
+  else if(mood == 0){
+    cout << "Mood:   ░░░░░░░░░░" << endl;
+    cout << endl;
+  }
 }
 
 void FantasyPet::printMenu(){
@@ -245,7 +267,9 @@ void FantasyPet::printMenu(){
   cout << "1: Feed" << endl;
   cout << "2: Play" << endl;
   cout << "3: Rest" << endl;
-  cout << "4: More options" << endl;
+  cout << "4. Give Bath" << endl;
+  cout << "5: Give Treat" << endl;
+  cout << "6: More options" << endl;
 }
 
 void FantasyPet::printMoreOptions() const{
@@ -265,26 +289,31 @@ void FantasyPet::printQuit() const{
 
 void FantasyPet::printFriendship(){
   if (friendshipLevel >= 0 && friendshipLevel <= 19){
+    cout << endl;
     cout << "=-=-=-=-=-=-=-=-=-=" << endl;
     cout << "Friendship Level: 1"  << endl;
     cout << "=-=-=-=-=-=-=-=-=-=" << endl;
   }
   else if (friendshipLevel >= 20 && friendshipLevel <= 39){
+    cout << endl;
     cout << "=-=-=-=-=-=-=-=-=-=" << endl;
     cout << "Friendship Level: 2" << endl;
     cout << "=-=-=-=-=-=-=-=-=-=" << endl;
   }
   else if (friendshipLevel >= 40 && friendshipLevel <= 59){
+    cout << endl;
     cout << "=-=-=-=-=-=-=-=-=-=" << endl;
     cout << "Friendship Level: 3" << endl;
     cout << "=-=-=-=-=-=-=-=-=-=" << endl;
   }
   else if (friendshipLevel >= 60 && friendshipLevel <= 79){
+    cout << endl;
     cout << "=-=-=-=-=-=-=-=-=-=" << endl;
     cout << "Friendship Level: 4" << endl;
     cout << "=-=-=-=-=-=-=-=-=-=" << endl;
   }
   else if (friendshipLevel >= 80){
+    cout << endl;
     cout << "=-=-=-=-=-=-=-=-=-=-=-=-="<< endl;
     cout << "Friendship Level: 5 (MAX)" << endl;
     cout << "=-=-=-=-=-=-=-=-=-=-=-=-=" << endl;
