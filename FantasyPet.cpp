@@ -84,54 +84,67 @@ void FantasyPet::printHealth() const {
   //for hunger
   if(hunger == 20 || hunger == 19){
     cout << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
     cout << "Hunger: ██████████" << endl;
     cout << endl;
   }
   else if(hunger == 18 || hunger == 17){
     cout << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
     cout << "Hunger: █████████░" << endl;
     cout << endl;
   }
   else if(hunger == 16 || hunger == 15){
     cout << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
     cout << "Hunger: ████████░░" << endl;
     cout << endl;
   }
   else if(hunger == 14 || hunger == 13){
     cout << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
     cout << "Hunger: ███████░░░" << endl;
     cout << endl;
   }
   else if(hunger == 12 || hunger == 11){
     cout << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
     cout << "Hunger: ██████░░░░" << endl;
     cout << endl;
   }
   else if(hunger == 10 || hunger == 9){
     cout << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
     cout << "Hunger: █████░░░░░" << endl;
     cout << endl;
   }
   else if(hunger == 8 || hunger == 7){
     cout << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
     cout << "Hunger: ████░░░░░░" << endl;
     cout << endl;
   }
   else if(hunger == 6 || hunger == 5){
+    cout << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
     cout << "Hunger: ███░░░░░░░" << endl;
     cout << endl;
   }
   else if(hunger == 4 || hunger == 3){
     cout << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
     cout << "Hunger: ██░░░░░░░░" << endl;
     cout << endl;
   }
   else if(hunger ==  2 || hunger == 1){
     cout << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
     cout << "Hunger: █░░░░░░░░░" << endl;
     cout << endl;
   }
   else if(hunger == 0){
+    cout << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
     cout << "Hunger: ░░░░░░░░░░" << endl;
     cout << endl;
   }
@@ -185,47 +198,47 @@ void FantasyPet::printHealth() const {
   //for mood
   if(mood == 20 || mood == 19){
     cout << "Mood:   ██████████" << endl;
-    cout << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
   }
   else if(mood == 18 || mood == 17){
     cout << "Mood:   █████████░" << endl;
-    cout << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
   }
   else if(mood == 16  || mood == 15){
     cout << "Mood:   ████████░░" << endl;
-    cout << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
   }
   else if(mood == 14 || mood == 13){
     cout << "Mood:   ███████░░░" << endl;
-    cout << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
   }
   else if(mood == 12 || mood == 11){
     cout << "Mood:   ██████░░░░" << endl;
-    cout << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
   }
   else if(mood == 10 || mood == 9){
     cout << "Mood:   █████░░░░░" << endl;
-    cout << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
   }
   else if(mood == 8 || mood == 7){
     cout << "Mood:   ████░░░░░░" << endl;
-    cout << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
   }
   else if(mood == 6 || mood == 5){
     cout << "Mood:   ███░░░░░░░" << endl;
-    cout << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
   }
   else if(mood == 4 || mood == 3){
     cout << "Mood:   ██░░░░░░░░" << endl;
-    cout << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
   }
   else if(mood == 2 || mood == 1){
     cout << "Mood:   █░░░░░░░░░" << endl;
-    cout << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
   }
   else if(mood == 0){
     cout << "Mood:   ░░░░░░░░░░" << endl;
-    cout << endl;
+    cout << "=-=-=-=-=-=-=-=-=-=" << endl;
   }
 }
 

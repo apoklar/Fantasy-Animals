@@ -48,8 +48,8 @@ void Sasquatch::walkInForest(){ //playing
   }
 
   if(getHungry() <= 5){
-    cout << getName() << " is hungry!" << endl;
     cout << endl;
+    cout << getName() << " is hungry!" << endl;
   }
 
   //for sleepy
@@ -70,8 +70,8 @@ void Sasquatch::walkInForest(){ //playing
   }
 
   if(getSleepy() <= 5){
-    cout << getName() << " is tired!" << endl;
     cout << endl;
+    cout << getName() << " is tired!" << endl;
   }
 
   //for mood
@@ -149,8 +149,8 @@ void Sasquatch::feedFood(){
   }
 
   if(getSleepy() <= 5){
-    cout << getName() << " is tired!" << endl;
     cout << endl;
+    cout << getName() << " is tired!" << endl;
   }
 
   //for mood
@@ -193,8 +193,8 @@ void Sasquatch::haveRest(){
   }
 
   if(getHungry() <= 5){
-    cout << getName() << " is hungry!" << endl;
     cout << endl;
+    cout << getName() << " is hungry!" << endl;
   }
 
   //for sleep
@@ -229,8 +229,8 @@ void Sasquatch::haveRest(){
   }
 
   if(getMood() <= 5){
-    cout << getName() << " is mad!" << endl;
     cout << endl;
+    cout << getName() << " is mad!" << endl;
   }
 
   //for friendship

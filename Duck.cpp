@@ -12,27 +12,22 @@ void Duck::goSwimming(){ //playing
   if(getFriendshipLevel() >= 0 && getFriendshipLevel() <= 19){
     cout << endl;
     cout << getName() << " went swimming!" << endl;
-    cout << endl;
   }
   else if(getFriendshipLevel() >= 20 && getFriendshipLevel() <= 39){
     cout << endl;
     cout << "You gave " << getName() << " a chew toy!" << endl;
-    cout << endl;
   }
   else if(getFriendshipLevel() >= 40 && getFriendshipLevel() <= 59){
     cout << endl;
     cout << getName() << " shot fireballs at targets!" << endl;
-    cout << endl;
   }
   else if(getFriendshipLevel() >= 60 && getFriendshipLevel() <= 79){
     cout << endl;
     cout << "You played tug-of-war with " << getName() << "! (You lost)" << endl;
-    cout << endl;
   }
   else if(getFriendshipLevel() >= 80){
     cout << endl;
     cout << "You and " << getName() << " went flying through the sky!" << endl;
-    cout << endl;
   }
   
   //for hungry
@@ -51,7 +46,6 @@ void Duck::goSwimming(){ //playing
 
   if(getHungry() <= 5){
     cout << getName() << " is hungry!" << endl;
-    cout << endl;
   }
 
   //for sleepy
@@ -70,7 +64,6 @@ void Duck::goSwimming(){ //playing
 
   if(getSleepy() <= 5){
     cout << getName() << " is tired!" << endl;
-    cout << endl;
   }
 
   //for mood
@@ -99,27 +92,22 @@ void Duck::feedBread(){
   if(getFriendshipLevel() >= 0 && getFriendshipLevel() <= 19){
     cout << endl;
     cout << "You fed " << getName() << " bread!" << endl;
-    cout << endl;
   }
   else if(getFriendshipLevel() >= 20 && getFriendshipLevel() <= 39){
     cout << endl;
     cout << "You fed " << getName() << " some watermelon!" << endl;
-    cout << endl;
   }
   else if(getFriendshipLevel() >= 40 && getFriendshipLevel() <= 59){
     cout << endl;
     cout << "You fed " << getName() << " rare spices!" << endl;
-    cout << endl;
   }
   else if(getFriendshipLevel() >= 60 && getFriendshipLevel() <= 79){
     cout << endl;
     cout << "You fed " << getName() << " fruit extracts!" << endl;
-    cout << endl;
   }
   else if(getFriendshipLevel() >= 80){
     cout << endl;
     cout << "You fed " << getName() << " rare spices!" << endl;
-    cout << endl;
   }
 
   //for hungry
@@ -152,7 +140,6 @@ void Duck::feedBread(){
 
   if(getSleepy() <= 5){
     cout << getName() << " is tired!" << endl;
-    cout << endl;
   }
 
   //for mood
@@ -180,7 +167,6 @@ void Duck::feedBread(){
 void Duck::haveRest(){
   cout << endl;
   cout << getName() << " went to sleep!" << endl;
-  cout << endl;
 
   //for hungry
   if(getHungry() == 2){
@@ -198,7 +184,6 @@ void Duck::haveRest(){
 
   if(getHungry() <= 5){
     cout << getName() << " is hungry!" << endl;
-    cout << endl;
   }
 
   //for sleep
@@ -231,7 +216,6 @@ void Duck::haveRest(){
 
   if(getMood() <= 5){
     cout << getName() << " is mad!" << endl;
-    cout << endl;
   }
 
   //for friendship
@@ -245,7 +229,6 @@ void Duck::haveRest(){
 void Duck::giveTreat(){
   cout << endl;
   cout << "You gave " << getName() << " a treat!" << endl;
-  cout << endl;
 
   //for sleep
   if (getSleepy() == 20){
@@ -287,7 +270,6 @@ void Duck::giveTreat(){
 void Duck::giveBath(){
   cout << endl;
   cout << "You gave " << getName() << " a bath!" << endl;
-  cout << endl;
 
   //for sleep
   if(getSleepy() == 1){
@@ -329,6 +311,7 @@ void Duck::giveBath(){
 void Duck::duckLoop(){
   while(true){
     if(getFriendshipLevel() >= 0 && getFriendshipLevel() <= 39){
+      cout << endl;
       cout << getName() << " the Duck" << endl;
       cout << "  __" << endl;
       cout << "<(o )___" << endl;
@@ -336,6 +319,7 @@ void Duck::duckLoop(){
       cout << "  `---' " << endl;
     }
     else if(getFriendshipLevel() >= 40){
+      cout << endl;
       cout << getName() << " the Phoenix" << endl;
       cout << "      __             __" << endl;
       cout << "   .-'.'     .-.     '.'-." << endl;

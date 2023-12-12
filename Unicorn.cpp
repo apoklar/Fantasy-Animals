@@ -12,27 +12,22 @@ void Unicorn::flyRainbow(){ //playing
   if(getFriendshipLevel() >= 0 && getFriendshipLevel() <= 19){
     cout << endl;
     cout << "You and " << getName() << " flew to a rainbow!" << endl;
-    cout << endl;
   }
   else if(getFriendshipLevel() >= 20 && getFriendshipLevel() <= 39){
     cout << endl;
     cout << "You and " << getName() << " went swimming in a lake!" << endl;
-    cout << endl;
   }
   else if(getFriendshipLevel() >= 40 && getFriendshipLevel() <= 59){
     cout << endl;
     cout << "You and " << getName() << " frolicked through a field of flowers!" << endl;
-    cout << endl;
   }
   else if(getFriendshipLevel() >= 60 && getFriendshipLevel() <= 79){
     cout << endl;
     cout << "You and " << getName() << " went to a chocolate waterfall!" << endl;
-    cout << endl;
   }
   else if(getFriendshipLevel() >= 80){
     cout << endl;
     cout << "You and " << getName() << " flew to candy mountain!" << endl;
-    cout << endl;
   }
 
   //for hungry
@@ -50,8 +45,8 @@ void Unicorn::flyRainbow(){ //playing
   }
 
   if(getHungry() <= 5){
-    cout << getName() << " is hungry!" << endl;
     cout << endl;
+    cout << getName() << " is hungry!" << endl;
   }
 
   //for sleepy
@@ -69,8 +64,8 @@ void Unicorn::flyRainbow(){ //playing
   }
 
   if(getSleepy() <= 5){
-    cout << getName() << " is tired!" << endl;
     cout << endl;
+    cout << getName() << " is tired!" << endl;
   }
 
   //for mood
@@ -95,27 +90,22 @@ void Unicorn::feedCupcakes(){
   if(getFriendshipLevel() >= 0 && getFriendshipLevel() <= 19){
     cout << endl;
     cout << "You fed " << getName() << " a cupcake!" << endl;
-    cout << endl;
   }
   else if(getFriendshipLevel() >= 20 && getFriendshipLevel() <= 39){
     cout << endl;
     cout << "You fed " << getName() << " chocolate!" << endl;
-    cout << endl;
   }
   else if(getFriendshipLevel() >= 40 && getFriendshipLevel() <= 59){
     cout << endl;
     cout << "You fed " << getName() << " berries!" << endl;
-    cout << endl;
   }
   else if(getFriendshipLevel() >= 60 && getFriendshipLevel() <= 79){
     cout << endl;
     cout << "You fed " << getName() << " butterflies!" << endl;
-    cout << endl;
   }
   else if(getFriendshipLevel() >= 80){
     cout << endl;
     cout << "You fed " << getName() << " candy!" << endl;
-    cout << endl;
   }
 
   //for hungry
@@ -147,8 +137,9 @@ void Unicorn::feedCupcakes(){
   }
 
   if(getSleepy() <= 5){
-    cout << getName() << " is tired!" << endl;
     cout << endl;
+    cout << getName() << " is tired!" << endl;
+
   }
 
   //for mood
@@ -172,7 +163,6 @@ void Unicorn::feedCupcakes(){
 void Unicorn::haveRest(){
   cout << endl;
   cout << getName() << " went to sleep!" << endl;
-  cout << endl;
 
   //for hungry
   if(getHungry() == 2){
@@ -189,8 +179,8 @@ void Unicorn::haveRest(){
   }
 
   if(getHungry() <= 5){
-    cout << getName() << " is hungry!" << endl;
     cout << endl;
+    cout << getName() << " is hungry!" << endl;
   }
 
   //for sleep
@@ -222,8 +212,8 @@ void Unicorn::haveRest(){
   }
 
   if(getMood() <= 5){
-    cout << getName() << " is mad!" << endl;
     cout << endl;
+    cout << getName() << " is mad!" << endl;
   }
 
   //for friendship
@@ -233,7 +223,6 @@ void Unicorn::haveRest(){
 void Unicorn::giveTreat(){
   cout << endl;
   cout << "You gave " << getName() << " a treat!" << endl;
-  cout << endl;
 
   //for sleep
   if (getSleepy() == 20){
@@ -275,7 +264,6 @@ void Unicorn::giveTreat(){
 void Unicorn::giveBath(){
   cout << endl;
   cout << "You gave " << getName() << " a bath!" << endl;
-  cout << endl;
 
   //for sleep
   if(getSleepy() == 1){
@@ -316,6 +304,7 @@ void Unicorn::giveBath(){
 
 void Unicorn::unicornLoop(){
   while(true){
+    cout << endl;
     cout << getName() << " the Unicorn" << endl;
     cout << "               |))    |))" << endl;
     cout << " .             |  )) /   ))" << endl;

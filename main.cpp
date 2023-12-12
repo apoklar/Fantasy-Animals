@@ -25,6 +25,7 @@ int main(){
 
   while (menuSelection == 1 || menuSelection == 2){
     if (menuSelection == 1){
+      cout << endl;
       cout << "Select a pet" << endl;
       cout << "1: Dragon" << endl;
       cout << "2: Sasquatch" << endl;
@@ -35,10 +36,12 @@ int main(){
       int petNum;
       cin >> petNum;
       if (petNum == 1 || petNum == 2 || petNum == 3 || petNum == 4){
+        cout << endl;
         cout << "What would you like to name your pet?" << endl;
         string petName;
-        cin >> petName;
-
+        cin.ignore();
+        getline(cin, petName);
+        
         Dragon dragon;
         dragon.setFantasyName(petName);
 
@@ -83,7 +86,8 @@ int main(){
       cout << endl;
       cout << "What is the name of your pet?" << endl;
       string nameOfPet;
-      cin >> nameOfPet;
+      cin.ignore();
+      getline(cin, nameOfPet);
       
       int petNum;
       ifstream loadFile(nameOfPet);
@@ -91,10 +95,11 @@ int main(){
       if(loadFile.is_open()){
         loadFile >> petNum; // read the saved petNum
         loadFile.close();
-        cout << nameOfPet << " loaded successfully!" << endl;
         cout << endl;
+        cout << nameOfPet << " loaded successfully!" << endl;
       }
       else {
+        cout << endl;
         cout << "Pet not found!" << endl;
         break;
       }
